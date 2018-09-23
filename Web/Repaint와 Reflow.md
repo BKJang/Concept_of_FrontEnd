@@ -23,6 +23,8 @@ function reFlow() {
 
 ```
 
+<br/>
+
 ## Repaint의 발생
 
 생성된 DOM 노드에 대하여 style을 변경시켰을 때, **무조건 `reflow`가 발생하진 않는다.**
@@ -38,6 +40,8 @@ function repaint() {
 }
 
 ```
+
+<br/>
 
 ## Repaint와 Reflow의 최적화
 
@@ -85,8 +89,10 @@ container.className = 'test';
 프레임에 따라 reflow비용이 많은 애니메이션 효과의 경우엔 노드의 `position`을 `absolute`나 `fixed`로 주면 전체 노드에서 분리된다.
 이 경우엔, **전체 노드에 걸쳐 Reflow 비용이 들지 않으며 해당 노드의 Repaint 비용만 들어가게 된다.**
 
-### 테이블 레이아웃을 피한다.
+#### 테이블 레이아웃을 피한다.
 테이블로 구성된 페이지 레이아웃의 경우, 점진적 페이지 렌더링이 일어나지 않고 모든 계산이 완료된 후, 화면에 렌더링이 되기 때문에 피하는게 좋다.
+
+<br/>
 
 
 ## Virtual DOM
@@ -106,7 +112,9 @@ DOM 요소에 접근하여 동적으로 이벤트를 주어 layout을 바꾸게 
 > 2. 이전 Virtual DOM 에 있던 내용과 현재의 내용을 비교.
 > 3. 바뀐 부분만 실제 DOM 에 적용.
 
-즉, Virtual DOM을 사용함으로써 바뀐 부분(Component)만 rerendering하기 때문에 컴포넌트가 업데이트 될 때, 레이아웃 계산이 한 번만 일어나게 된다.
+즉, **Virtual DOM을 사용함으로써 바뀐 부분(Component)만 rerendering하기 때문에 컴포넌트가 업데이트 될 때, 레이아웃 계산이 한 번만 일어나게 된다.**
+
+<br/>
 
 #### Reference
 
