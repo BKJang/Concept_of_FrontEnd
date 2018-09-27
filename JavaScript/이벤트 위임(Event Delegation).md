@@ -10,30 +10,30 @@
 
 ```html
 <body>
-	<div class="el1">
-		<div class="el2">
-			<div class="el3">
-			</div>
-		</div>
+   <div class="el1">
+	<div class="el2">
+	    <div class="el3">
+	    </div>
 	</div>
+   </div>
 </body>
 ```
 
 ```javascript
 var divs = document.querySelectorAll('div');
 divs.forEach(function(div) {
-	div.addEventListener('click', bubbleEvent);
+    div.addEventListener('click', bubbleEvent);
 });
 
 function bubbleEvent(e) {
-	console.log(e.currentTarget.className);
+    console.log(e.currentTarget.className);
 }
 
 
 /*
-	el3
-	el2
-	el1
+el3
+el2
+el1
 */
 ```
 
@@ -49,8 +49,8 @@ function bubbleEvent(e) {
 <body>
    <div class="el1">
        <div class="el2">
-        	<div class="el3">
-            </div>
+	  <div class="el3">
+	  </div>
        </div>
    </div>
 </body>
@@ -59,13 +59,13 @@ function bubbleEvent(e) {
 ```javascript
 var divs = document.querySelectorAll('div');
 divs.forEach(function(div) {
-	div.addEventListener('click', captureEvent, {
-		capture : true
-	});
+    div.addEventListener('click', captureEvent, {
+        capture : true
+    });
 });
 
 function captureEvent(e) {
-	console.log(e.currentTarget.className);
+    console.log(e.currentTarget.className);
 }
 
 /*
@@ -88,23 +88,23 @@ el3
 
 ```html
 <body>
-	<ul class="list">
-		<li>
-			<input type="checkbox" id="one"/>
-		</li>
-		<li>
-			<input type="checkbox" id="two"/>
-		</li>
-	</ul> 
+   <ul class="list">
+      <li>
+         <input type="checkbox" id="one"/>
+      </li>
+      <li>
+         <input type="checkbox" id="two"/>
+      </li>
+   </ul> 
 </body>
 
 ```
 ```javascript
 var items = document.querySelectorAll('input');
 items.forEach(function(item) {
-	item.addEventListener('click', function(e) {
-		console.log(e.currentTarget.id);
-	});
+    item.addEventListener('click', function(e) {
+       console.log(e.currentTarget.id);
+    });
 });
 
 ```
@@ -119,16 +119,16 @@ items.forEach(function(item) {
 /*
 var items = document.querySelectorAll('input');
 items.forEach(function(item) {
-	item.addEventListener('click', function(e) {
-		console.log(e.currentTarget.id);
-	});
+    item.addEventListener('click', function(e) {
+       console.log(e.currentTarget.id);
+    });
 });
 */
 
 //이벤트 위임 방식으로 코드 변경
 var items = document.querySelector('.list');
 items.addEventListener('click', function(e) {
-	console.log(e.currentTarget.id);
+    console.log(e.currentTarget.id);
 });
 
 ```
