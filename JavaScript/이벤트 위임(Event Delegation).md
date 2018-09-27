@@ -60,8 +60,8 @@ function bubbleEvent(e) {
 var divs = document.querySelectorAll('div');
 divs.forEach(function(div) {
 	div.addEventListener('click', captureEvent, {
-    	capture : true
-    });
+		capture : true
+	});
 });
 
 function captureEvent(e) {
@@ -69,9 +69,9 @@ function captureEvent(e) {
 }
 
 /*
-	el1
-    el2
-    el3
+el1
+el2
+el3
 */
 ```
 이벤트 캡쳐(Event Capture)를 테스트하기 위해 `addEventListener()`함수에 `capture : true`라는 옵션을 추가했다.
@@ -89,13 +89,13 @@ function captureEvent(e) {
 ```html
 <body>
 	<ul class="list">
-    	<li>
+		<li>
 			<input type="checkbox" id="one"/>
-        </li>
-        <li>
+		</li>
+		<li>
 			<input type="checkbox" id="two"/>
-        </li>
-    </ul>
+		</li>
+	</ul> 
 </body>
 
 ```
