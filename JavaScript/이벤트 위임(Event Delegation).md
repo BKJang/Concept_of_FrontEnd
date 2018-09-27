@@ -32,15 +32,15 @@ function bubbleEvent(e) {
 
 /*
 	el3
-    el2
-    el1
+	el2
+	el1
 */
 ```
 
 위의 코드에서는 class 명이 el3인 element(`<div class="el3"></div>`)을 클릭했을 때, **이벤트가 발생하는 요소인 `<div class="el3"></div>`에서 상위에 있는 요소까지 이벤트를 전파시키고 있다.**
 이에 따라 결과 값은 el3만 나오는 것이 아닌 el1까지 콘솔에 출력되고 있다.
 
-이처럼, 이벤트가 발생한 요소로부터 상위요소로 전파시키는 이벤트 전파 방식을 **이벤트 버블링(Event Bubbling)**이라고 한다.
+이처럼, 이벤트가 발생한 요소로부터 상위요소로 전파시키는 이벤트 전파 방식을 **이벤트 버블링**이라고 한다.
 
 
 ## 이벤트 캡쳐(Event Capture)
@@ -84,16 +84,16 @@ function captureEvent(e) {
 
 ## 이벤트 위임(Event Delegation)
 
-**이벤트 위임**은 하위 요소 각각에 이벤트를 구현하지 않고 상위 요소에서 하위요소의 이벤트를 제어하는 방식입니다.
+**이벤트 위임**은 하위 요소 각각에 이벤트를 구현하지 않고 상위 요소에서 하위요소의 이벤트를 제어하는 방식이다.
 
 ```html
 <body>
 	<ul class="list">
     	<li>
-        	<input type="checkbox" id="one"/>
+			<input type="checkbox" id="one"/>
         </li>
         <li>
-        	<input type="checkbox" id="two"/>
+			<input type="checkbox" id="two"/>
         </li>
     </ul>
 </body>
@@ -104,7 +104,7 @@ var items = document.querySelectorAll('input');
 items.forEach(function(item) {
 	item.addEventListener('click', function(e) {
 		console.log(e.currentTarget.id);
-    });
+	});
 });
 
 ```
@@ -121,7 +121,7 @@ var items = document.querySelectorAll('input');
 items.forEach(function(item) {
 	item.addEventListener('click', function(e) {
 		console.log(e.currentTarget.id);
-    });
+	});
 });
 */
 
