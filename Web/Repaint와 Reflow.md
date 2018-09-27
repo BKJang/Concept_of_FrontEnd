@@ -71,7 +71,7 @@ var container = document.getElementById('container');
 
 container.style.padding = "20px";
 container.style.border = "10px solid red";
-container.style.color = "blue"; //
+container.style.color = "blue";
 
 //After cssText
 container.style.cssText = 'padding:20px;border:10px solid red;color:blue;';
