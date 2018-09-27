@@ -28,7 +28,7 @@ function reFlow() {
 ## Repaint의 발생
 
 생성된 DOM 노드에 대하여 style을 변경시켰을 때, **무조건 `reflow`가 발생하진 않는다.**
-**레이아웃 수치에 대한 변경이 일어나지 않는다면, `reflow`가 일어나지 않고, `repaint`는 일어나지 않는다.**
+**레이아웃 수치에 대한 변경이 일어나지 않는다면, `reflow`가 일어나지 않고, `repaint`만 일어난다.**
 이러한 경우에는, 색상변경과 같이 레이아웃의 변경이 없는 경우가 있다.
 
 ```javascript
@@ -59,7 +59,7 @@ for(var i=0; i<100; i++) {
 var container = document.getElementById('container');
 
 for(var i=0; i<100; i++) {
-	container.style.padding = i + 'px';
+    container.style.padding = i + 'px';
 }
 ```
 
