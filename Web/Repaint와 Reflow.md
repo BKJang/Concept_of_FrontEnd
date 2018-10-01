@@ -4,7 +4,7 @@
 
 ![브라우저의 렌더링](/Web/images/rendering.png)
 
-위의 그림과 같이 브라우저는 화면을 rendering하는 과정에서 **배치(flow)**와 **그리기(paint)**의 과정을 거친다.
+위의 그림과 같이 브라우저는 화면을 rendering하는 과정에서 **배치\(flow\)** 와 **그리기\(paint\)** 의 과정을 거친다.
 
 ## Reflow의 발생
 
