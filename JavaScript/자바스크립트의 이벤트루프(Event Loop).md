@@ -21,7 +21,7 @@
 <br/>
 
 이벤트 루프 설명의 대표적인 예로 `setTimeout()`이 있다.
-
+ 
 ```javascript
 function foo() {
 	console.log('b');
