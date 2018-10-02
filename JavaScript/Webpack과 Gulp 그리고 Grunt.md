@@ -5,6 +5,8 @@
 
 > Webpack과 Gulp&Grunt는 태생부터 다르다
 
+<br/>
+
 ## Gulp와 Grunt
 
 webpack과 gulp, grunt는 사실 아예 다르다. Gulp와 Grunt(이하 걸프로 통일)는 **Task Runner**라고 한다.
@@ -18,7 +20,7 @@ gulp와 grunt의 하는일은 같지만 만들어내는 방식이 다르다.
 grunt는 package.json처럼 **json형식으로 설정을 선언하여 사용**한다. 
 이와 다르게 gulp는 **node.js의 스트림 기능을 이용하여 자바스크립트 코드를 사용**한다.
 
-
+<br/>
 
 ## 모듈번들러(Module Bundler)
 
@@ -39,6 +41,8 @@ grunt는 package.json처럼 **json형식으로 설정을 선언하여 사용**�
 그런데 브라우저 상에서는 이러한 의존성을 표현하기가 어렵다. 특히 HTTP/1.1을 사용해야 하는 환경이라면 더욱 힘들다.
 
 > HTTP/2.0의 경우 **한 번의 요청에 여러 파일**을 받아올 수 있지만, HTTP/1.1의 경우는 의존성을 통해 **여러 파일이 필요하게 된다면 너무 많은 네트워크 자원을 소모**하게 된다.
+
+<br/>
 
 ## Webpack
 

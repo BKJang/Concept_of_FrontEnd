@@ -1,10 +1,14 @@
 # Repaint와 Reflow
 
+<br/>
+
 ## 브라우저의 rendering 과정
 
 ![브라우저의 렌더링](/Web/images/rendering.png)
 
 위의 그림과 같이 브라우저는 화면을 rendering하는 과정에서 **배치\(flow\)** 와 **그리기\(paint\)** 의 과정을 거친다.
+
+<br/>
 
 ## Reflow의 발생
 
@@ -48,7 +52,7 @@ function repaint() {
 `Repaint`와 `Reflow`가 많아질수록 애플리케이션의 렌더링 성능은 느려지게 된다.
 즉, 이를 줄일수록 성능을 높일 수 있다.
 
-#### DOM객체의 캐싱
+### DOM객체의 캐싱
 ```javascript
 //Before
 for(var i=0; i<100; i++) {
@@ -63,7 +67,7 @@ for(var i=0; i<100; i++) {
 }
 ```
 
-#### class명과 cssText사용
+### class명과 cssText사용
 
 ```javascript
 //Before
@@ -80,7 +84,7 @@ container.style.cssText = 'padding:20px;border:10px solid red;color:blue;';
 container.className = 'test';
 ```
 
-#### 애니메이션이 들어간 노드는 가급적 position:fixed 또는 position:absolute로 지정
+### 애니메이션이 들어간 노드는 가급적 position:fixed 또는 position:absolute로 지정
 
 ``` javascript
 <div id="animation" style="background:blue;position:absolute;"></div>
@@ -89,11 +93,10 @@ container.className = 'test';
 프레임에 따라 reflow비용이 많은 애니메이션 효과의 경우엔 노드의 `position`을 `absolute`나 `fixed`로 주면 전체 노드에서 분리된다.
 이 경우엔, **전체 노드에 걸쳐 Reflow 비용이 들지 않으며 해당 노드의 Repaint 비용만 들어가게 된다.**
 
-#### 테이블 레이아웃을 피한다.
+### 테이블 레이아웃을 피한다.
 테이블로 구성된 페이지 레이아웃의 경우, 점진적 페이지 렌더링이 일어나지 않고 모든 계산이 완료된 후, 화면에 렌더링이 되기 때문에 피하는게 좋다.
 
 <br/>
-
 
 ## Virtual DOM
 
@@ -106,7 +109,7 @@ DOM 요소에 접근하여 동적으로 이벤트를 주어 layout을 바꾸게 
 
 이 과정에서 규모가 큰 애플리케이션일수록 recalculate할 양이 늘어나고 이는 성능에 큰 영향을 미친다.
 
-#### Virtual DOM의 사용
+### Virtual DOM의 사용
 
 > 1. 데이터가 업데이트되면, 전체 UI 를 Virtual DOM 에 리렌더링.
 > 2. 이전 Virtual DOM 에 있던 내용과 현재의 내용을 비교.
