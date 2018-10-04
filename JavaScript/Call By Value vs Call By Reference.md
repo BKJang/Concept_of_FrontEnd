@@ -10,8 +10,8 @@
 
 ## Parameter, Arguments
 
-> parameter는 **함수 선언부**에 정의
-> arguments는 **함수 호출부**에서 사용
+> * parameter는 **함수 선언부**에 정의
+> * arguments는 **함수 호출부**에서 사용
 
 ```javascript
 var a = 1;
@@ -119,8 +119,6 @@ console.log(obj); // {}
 ![CallBySharing](/JavaScript/images/CallBySharing.png)
 
 <br/>
-
-### Quiz
 
 ```javascript
 var a = {};
