@@ -358,7 +358,7 @@ const makeRequest = async () => {
 
 </br>
 
-## 참고
+#### Reference
 
 - [Generator](https://meetup.toast.com/posts/73)
 - [iterator](https://medium.com/@la.place/javascript-iterator-b16ca3c51af2)
