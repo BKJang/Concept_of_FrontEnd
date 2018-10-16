@@ -307,7 +307,7 @@ function _asyncToGenerator(fn) {
 
 ---
 
-`Promise`로 구현
+* `Promise`로 구현
 
 ```js
 const makeRequest = () => {
