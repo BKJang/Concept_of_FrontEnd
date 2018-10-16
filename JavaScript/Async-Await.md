@@ -287,7 +287,7 @@ function _asyncToGenerator(fn) {
 
 </br>
 
-### `Promise`
+### Promise
 
 ---
 
