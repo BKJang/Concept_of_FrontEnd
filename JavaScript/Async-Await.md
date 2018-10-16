@@ -301,6 +301,12 @@ function _asyncToGenerator(fn) {
 
 > Promise => **프로미스는 자바스크립트 비동기 처리에 사용되는 객체다.** 여기서 자바스크립트의 비동기 처리란 특정 코드의 실행이 완료될 때까지 기다리지 않고 다음 코드를 먼저 수행하는 자바스크립트의 특성을 의미한다
 
+</br>
+
+### Promise vs Async/Await
+
+---
+
 `Promise`로 구현
 
 ```js
@@ -325,7 +331,7 @@ const makeRequest = () => {
 }
 ```
 
-* `async/await`로 구현
+* `Async/Await`로 구현
 
 ```js
 const makeRequest = async () => { 
