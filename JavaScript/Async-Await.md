@@ -24,7 +24,7 @@
 
 열거가 가능한 객체란 **배열(Array)는 물론, TypedArray, 문자열(String), Map, Set, DOM Collection 등**을 말한다.
 
-```javascript
+```javascript 
 /* array */
 let iterable = [10, 20, 30];
 
@@ -307,51 +307,53 @@ function _asyncToGenerator(fn) {
 
 ---
 
-* `Promise`로 구현
-
-```js
-const makeRequest = () => {
+* `promise`로 구현
+ ```js
+function makeRequest() {
     return getData()
         .then(data => {
-            if (data.needMoreRequest) {
-                return makeMoreRequest(data)
+            if(data) {
+                if (data.needMoreRequest) {
+                  return makeMoreRequest(data)
                     .then(moreData => {
                         console.log(moreData);
                         return moreData;
                     }).catch((error) => {
-                      console.error('Error while makeMoreRequest', error);
+                      console.log('Error while makeMoreRequest', error);
                     });
+                } else {
+                  console.log(data);
+                  return data;
+                }
             } else {
-                console.log(data);
-                return data;
+                return 'No Data';
             }
         }).catch((error) => {
-          console.error('Error while getData', error);
+          console.log('Error while getData', error);
         });
 }
 ```
 
-* `Async/Await`로 구현
+ * `async/await` 구현
 
 ```js
-const makeRequest = async () => { 
+async function makeRequest() { 
     try {
       const data = await getData();
-
-      if (data.needMoreRequest) {
-          try {
+        if(data) {
+          if (data.needMoreRequest) {
             const moreData = await makeMoreRequest(data);
             console.log(moreData);
             return moreData;
-          } catch (error) {
-            console.error('Error while makeMoreRequest', error);
+          } else {
+            console.log(data);
+            return data;
           }
       } else {
-          console.log(data);
-          return data;
+          return 'No Data';
       }
     } catch (error) {
-      console.error('Error while getData', error);
+        console.log('Error while getData', error);
     }
 }
 ```
