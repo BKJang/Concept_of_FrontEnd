@@ -141,7 +141,7 @@ ajax('url...', asyncify(success(data)), failure(err));
 
 `asyncify()`에는 **비동기를 동기화 시켜서 success 를 실행하고 혹시 ajax 의 결과가 에러면 failure 를 실행**시킨다. 이러면 에러처리가 우선 해결된다. 그리고 `asyncify` 를 통해서 일시적으로 동기화를 시켜 비동기 결과가 아직 도착한 뒤 콜백을 실행시키게 만들 수는 있다. 그런데 이를 위해 저 `asyncify` 라는 함수를 만들어야 하고 거기서 에러는 없는지 테스트 해보고... 점점 무거워질 것이다.
 
-이를 해결하기 위해 ES6 에서 등장한것이 바로 Promise 다.
+이를 해결하기 위해 ES6 에서 등장한것이 바로 [Promise](https://github.com/BKJang/Concept_of_FrontEnd/blob/master/JavaScript/Promise.md) 다.
 
 <br/>
 
