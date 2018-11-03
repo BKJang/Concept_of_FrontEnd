@@ -1,4 +1,4 @@
-# 점진적향상과 우아한하향.md
+# Progressive enhancement와 Graceful degradation
 
 2가지 개발접근법이 있다. 우아한 낮춤과 점진적인 향상.
 
