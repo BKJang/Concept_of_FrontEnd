@@ -12,6 +12,8 @@ Node.js를 사용하고 있는 개발자들은 `module.exports`를 통해 모듈
 
 프론트엔드에서는 위와 같은 모듈 제공 방식이 없었다.
 
+이에 따라 `window`객체를 이용하여 모듈의 리소스를 전달하는 방식을 이용했었다.
+
 ```js
 //math.js
 var sum = function() {
@@ -39,13 +41,14 @@ if (typeof Math !== 'undefined') {
     throw new Error('A module `Math` is undefined.');
 }
 ```
-**전역 오브젝트인 window를 객체를 통해 다른 자바스크립트 파일에 리소스를 전달** 할 수 있다.
+
+위 소스를 보면 **전역 오브젝트인 `window` 객체를 통해 다른 자바스크립트 파일에 리소스를 전달** 하고 있다.
 
 하지만 이것도 사용하는 HTML에서 불러오는 모듈 파일을 먼저 로드해야한다.
 
-즉, **대상 모듈이 존재하지 않을 수도 있는 상태**가 된다.
+즉, **대상 모듈이 존재할수도, 존재하지 않을 수도 있는 상태**가 된다.
 
-하지만 프로젝트 규모가 커지게 되면서 프론트엔드에서 모듈화를 제공하기 위헤 `AMD`와 `CommonJS` 방식이 생겨나게 됐다.
+이후 점차 프로젝트 규모가 커지게 되면서 프론트엔드에서 좀 더 효율적인 모듈화를 제공하기 위헤 `AMD`와 `CommonJS` 방식이 생겨나게 됐다.
 
 <br/>
 
@@ -115,7 +118,7 @@ console.log(math.sum(1, 2));
 
 ## 모듈 제공의 방향과 ES6
 
-이전 Module 방식이 AMD vs CommonJS였다면, CommonJS와 ES6 타입으로 축약되는 것으로 보인다. 
+이전 Module 제공 방식의 추세가  AMD vs CommonJS였다면, CommonJS와 ES6 타입으로 축약되는 것으로 보인다. 
 
 즉, **AMD 방식은 사양되는 분위기**다.
 
@@ -138,3 +141,5 @@ ES6 모듈을 포함한 내용은 아래의 글에서 확인할 수 있다.
 #### Reference
 
 - [자바스크립트 모듈 제공을 위한 AMD, CommonJS 그리고 RequireJS 소개](https://blog.pigno.se/post/157992405313/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EB%AA%A8%EB%93%88-%EC%A0%9C%EA%B3%B5%EC%9D%84-%EC%9C%84%ED%95%9C-amd-commonjs-%EA%B7%B8%EB%A6%AC%EA%B3%A0-requirejs-%EC%86%8C%EA%B0%9C)
+
+- [JavaScript 표준을 위한 움직임: CommonJS와 AMD](https://d2.naver.com/helloworld/12864)
