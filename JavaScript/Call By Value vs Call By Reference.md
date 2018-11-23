@@ -4,7 +4,7 @@
 
 > [평가 전략(Evaluation Strategy)](https://ko.wikipedia.org/wiki/%ED%8F%89%EA%B0%80_%EC%A0%84%EB%9E%B5_(%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)) 은 프로그래밍 언어에서 함수 호출의 아규먼트(argument)의 순서를 언제 결정하고 함수에 어떤 종류의 값을 통과시킬지 결정하는 것이다.
 
-**함수에 인자로 무엇을 넣는냐에 따라 함수가 어떻게 실행이 될 것인지?**
+**'함수에 인자로 무엇을 넣는냐에 따라 함수가 어떻게 실행이 될 것인지?'**에 대해 세우는 전략이다.
 
 <br/>
 
@@ -137,9 +137,9 @@ console.log(a.b); // undefined
 
 <br/>
 
-> - 자바스크립트에서 Call By Reference는 존재하지 않고 Call By Value만 존재한다.
-> - 참조 타입을 인자로 넘기면 참조값에 대한 복사본이 넘어간다.
-> - 혼동을 줄이고자 call by sharing이란 용어로 부르기도 한다.
+> - 자바스크립트에서 **Call By Reference는 존재하지 않고 Call By Value만 존재**한다.
+> - 참조 타입을 인자로 넘기면 **참조값에 대한 복사본**이 넘어간다.
+> - 혼동을 줄이고자 **Call By Sharing**이란 용어로 부르기도 한다.
 
 #### Reference
 
