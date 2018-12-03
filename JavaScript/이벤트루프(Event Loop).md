@@ -1,4 +1,4 @@
-# 자바스크립트의 이벤트루프(Event Loop)
+# 이벤트루프(Event Loop)
 
 <br/>
 
