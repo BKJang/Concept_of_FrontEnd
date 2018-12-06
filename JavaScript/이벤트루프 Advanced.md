@@ -64,23 +64,6 @@ console.log('script end');
 
 <br/>
 
----
-**Task**
-
----
-**Micro Task**
-
----
-**jsStack**
-
----
-**log**
-
----
-
-<br/>
-<br/>
-
 ### 참고 및 예제 문제
 
 - [예제](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules)
